@@ -21,6 +21,7 @@ Before installation, define your network layout:
 * Launch VirtualBox → New VM.
 
    <img width="488" height="405" alt="image" src="https://github.com/user-attachments/assets/1e982497-3dc7-490d-92ea-eed308b0c002" />
+   
 * Configure:
     1. Name: pfSense (or preferred)
     2. Type: Linux
@@ -38,18 +39,22 @@ Before installation, define your network layout:
   System Settings:
     1. Boot Order: Hard Disk > Optical Drive, uncheck Floppy
     2. Network Settings: Adapter 1: NAT → WAN, Adapter 2: Internal Network → LAN (name: LAN1)
+       
   <img width="563" height="460" alt="image" src="https://github.com/user-attachments/assets/936af918-df37-4e45-ae69-3bbe35718908" />
 
 * Storage Settings:
     1. Mount the pfSense ISO in Storage → Optical Drive
+  
   <img width="639" height="498" alt="image" src="https://github.com/user-attachments/assets/37fa20b5-d5aa-48d1-bacd-e5a63a6bcd7f" />
 
 
 ## Install pfSense
 Start VM
+
 <img width="861" height="487" alt="image" src="https://github.com/user-attachments/assets/41651860-fe44-4614-925d-f40a9801042d" />
 
 * Accept default installation options
+  
 <img width="863" height="482" alt="image" src="https://github.com/user-attachments/assets/85775d45-a1ee-43c5-bd0e-caae6d3dcd46" />
 
 * Use Auto (UFS) as file system
@@ -57,7 +62,9 @@ Start VM
 * Complete installation and reboot
 
 **Configure Interfaces**
+
 <img width="732" height="416" alt="image" src="https://github.com/user-attachments/assets/9feaf110-8436-4f5d-91de-fe046ddf3564" />
+
 * Detect WAN and LAN interfaces automatically
 * Configure LAN IP: 192.168.x.x/24
 * Enable DHCP: 192.168.x.x – 192.168.x.x
@@ -66,6 +73,7 @@ Start VM
 
 **Create a client VM (e.g., Kali Linux) on LAN1**
 <img width="941" height="470" alt="image" src="https://github.com/user-attachments/assets/5b065194-c9df-478c-96c9-a8eafc5e7f6d" />
+
 * Ensure it receives an IP from pfSense DHCP
 * Access pfSense WebGUI: http://192.168.X.X
 
